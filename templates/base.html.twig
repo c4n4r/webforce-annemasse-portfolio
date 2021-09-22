@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html class="h-full">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    {% block stylesheets %}
+        {# {{ encore_entry_link_tags('app') }} #}
+    {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body class="h-full flex flex-col text-gray-800 font-sans">
-        {% include('partials/_navbar.html.twig') %}
-        <div class="px-24 mt-12 h-full">
-            {% block body %}{% endblock %}
-        </div>
-    </body>
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body class="h-full flex flex-col text-gray-800 font-sans">
+
+{{ render(controller(
+    'App\\Controller\\Partials\\NavbarController::indexAction',
+)) }}
+<div class="px-24 mt-12 h-full">
+    {% block body %}{% endblock %}
+</div>
+</body>
 </html>

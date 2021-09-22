@@ -1,3 +1,10 @@
 <div class="h-12 bg-green-400 flex w-full items-center px-4">
     <a href="{{ path('home') }}" class="text-white font-bold">Hadrien Delphin : Développeur freelance</a>
+    <select name="" id="">
+        {% for category in categories %}
+
+            <option value="{{ category.id }}">{{ category.title }}</option>
+
+        {% endfor %}
+    </select>
 </div>
