@@ -2,27 +2,35 @@
 
 {% block body %}
 
-    <div class="w-full h-2/5 bg-gray-100 rounded-xl shadow-lg border-gray-200 flex items-center">
-        <div class="px-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus, ullam. Aperiam assumenda beatae culpa eveniet excepturi itaque libero nam neque quae quas quidem sit, soluta ullam voluptatem voluptatibus! Tenetur.
+    <div class="w-full h-2/5 bg-gray-50 rounded-xl shadow-lg border-gray-200 flex items-center">
+        <div class="w-3/4 px-6 text-gray-600 text-lg">
+            <span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi commodi cumque debitis dicta dolores doloribus esse fugit id itaque minus, necessitatibus nesciunt officiis, optio placeat, porro possimus quo reprehenderit.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, maxime quia! Deserunt est ipsum libero magnam ratione voluptas. Aliquam amet ducimus earum, illo incidunt molestiae nam quisquam rem sint temporibus!
+            </span>
         </div>
-        <div class="h-full items-center">
-            <img class="object-fill " src="https://assuranceit.ca/wp-content/uploads/2019/06/it-guy.png" alt="">
+        <div class="h-full w-1/4 items-center flex justify-center">
+            <img class="object-fill w-52 h-52 rounded-full"
+                 src="https://programme-tv.leparisien.fr/media/cache/program_image_988x740_up/uploads/svod/41219068-6e97-408d-9f76-aec8b1dd6332.jpg"
+                 alt="">
         </div>
     </div>
-
-    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
-    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
-    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
-
-    <div class="flex w-full mt-24 items-center justify-center">
-
+    <div class="w-full px-12 mt-14">
+        <p class="my-6 text-xl font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate
+            dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed
+            similique, sunt suscipit voluptatem.</p>
+        <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate
+            dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed
+            similique, sunt suscipit voluptatem.</p>
+        <p class="my-6 text-xl font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate
+            dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed
+            similique, sunt suscipit voluptatem.</p>
+    </div>
+    <div class="flex w-full my-16 items-center justify-center">
         {% for skill in skills %}
-
             <img class="w-32 h-32 mx-12 rounded-full" src="{{ skill.image }}" alt="">
 
         {% endfor %}
-
     </div>
 
 
