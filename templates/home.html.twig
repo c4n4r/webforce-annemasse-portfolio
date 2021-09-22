@@ -1,5 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>Home</h1>
+
+    <div class="w-full h-2/5 bg-gray-100 rounded-xl shadow-lg border-gray-200 flex items-center">
+        <div class="px-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus, ullam. Aperiam assumenda beatae culpa eveniet excepturi itaque libero nam neque quae quas quidem sit, soluta ullam voluptatem voluptatibus! Tenetur.
+        </div>
+        <div class="h-full items-center">
+            <img class="object-fill " src="https://assuranceit.ca/wp-content/uploads/2019/06/it-guy.png" alt="">
+        </div>
+    </div>
+
+    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
+    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
+    <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cupiditate dolore, doloremque eligendi error fugit id ipsa ipsum obcaecati pariatur praesentium quae repellendus rerum sed similique, sunt suscipit voluptatem.</p>
+
+    <div class="flex w-full mt-24 items-center justify-center">
+
+        {% for skill in skills %}
+
+            <img class="w-32 h-32 mx-12 rounded-full" src="{{ skill.image }}" alt="">
+
+        {% endfor %}
+
+    </div>
+
+
 {% endblock %}
