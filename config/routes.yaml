@@ -4,3 +4,8 @@
 home:
   path: /
   controller: App\Controller\HomeController::indexAction
+
+show_skill:
+  path: /skill/{id}/show
+  controller: App\Controller\SkillController::showAction
+

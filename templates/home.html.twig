@@ -28,8 +28,9 @@
     </div>
     <div class="flex w-full my-16 items-center justify-center">
         {% for skill in skills %}
-            <img class="w-32 h-32 mx-12 rounded-full" src="{{ skill.image }}" alt="">
-
+            <a href="{{ path('show_skill', {id: skill.id}) }}">
+                <img class="w-32 h-32 mx-12 rounded-full" src="{{ skill.image }}" alt="">
+            </a>
         {% endfor %}
     </div>
 
