@@ -17,7 +17,7 @@ class HomeController extends AbstractController
         //je cut le tableau pour garder les 3 premier
         $skills = array_slice($skills,0,3);
         return $this->render('home.html.twig',
-            ['skills' => $skills, 'categories' => $categories]);
+            ['skills' => $skills]);
     }
 
 }
