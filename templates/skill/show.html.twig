@@ -3,13 +3,17 @@
 {% block body %}
 
     <h3>
-        {{ skill.title }}
+        Skill : {{ skill.title }}
     </h3>
 
+    {% if skill.technos | length > 0 %}
     <h4>
-        Technos liées : {% for techno in skill.technos %} {{ techno.title}} {% endfor %}
+        Technos liées :
+        {% for techno in skill.technos %}
+            <a href="{{ path('show_techno', {id: techno.id}) }}" class="text-blue-400 cursor-pointer hover:underline">{{ techno.title}}</a>
+        {% endfor %}
     </h4>
-
+    {% endif %}
     <p>
         {{ skill.content }}
     </p>

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <h3>
+        Techno : {{ techno.title }}
+    </h3>
+    <p>
+        {{ techno.content }}
+    </p>
+    
+    <div>
+        <img src="{{ techno.image }}" alt="">
+    </div>
+
+{% endblock %}

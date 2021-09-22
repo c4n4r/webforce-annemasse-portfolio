@@ -9,3 +9,7 @@ show_skill:
   path: /skill/{id}/show
   controller: App\Controller\SkillController::showAction
 
+show_techno:
+  path: /techno/{id}/show
+  controller: App\Controller\TechnoController::showAction
+
