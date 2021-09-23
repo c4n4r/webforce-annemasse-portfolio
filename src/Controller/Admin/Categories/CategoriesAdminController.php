@@ -4,11 +4,18 @@ namespace App\Controller\Admin\Categories;
 
 use App\Entity\Category;
 use App\Form\CategoryType;
+use App\Services\Categories\CategoryFormHandler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
 class CategoriesAdminController extends AbstractController
 {
+    private $formHandler;
+
+    public function __construct(CategoryFormHandler $formHandler)
+    {
+        $this->formHandler = $formHandler;
+    }
 
     public function listAction()
     {
@@ -22,7 +29,7 @@ class CategoriesAdminController extends AbstractController
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->handleForm($category, $form);
+            $this->formHandler->handleForm($form);
             return $this->redirectToRoute('dashboard_list_categories');
         }
         return $this->render('admin/categories/form.html.twig', ['category_form' => $form->createView()]);
@@ -34,7 +41,7 @@ class CategoriesAdminController extends AbstractController
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->handleForm($category, $form);
+            $this->formHandler->handleForm($form);
             return $this->redirectToRoute('dashboard_list_categories');
         }
         return $this->render('admin/categories/form.html.twig', ['category_form' => $form->createView()]);
@@ -47,13 +54,4 @@ class CategoriesAdminController extends AbstractController
         $manager->flush();
         return $this->redirectToRoute('dashboard_list_categories');
     }
-
-
-    private function handleForm(Category $category, $form)
-    {
-        $category = $form->getData();
-        $this->getDoctrine()->getManager()->persist($category);
-        $this->getDoctrine()->getManager()->flush();
-    }
-
 }
