@@ -1,9 +1,12 @@
-<div class="w-full h-full flex justify-center flex-col">
+<div class="w-full h-full flex flex-col">
+    <div class="h-16 bg-gray-600 text-white border-b border-gray-200 flex items-center justify-center">
+        <h3 class="">Hadrien</h3>
+    </div>
     <div class="flex flex-col">
-        <h3> Categories </h3>
-        <div class="flex flex-col">
-            <a href="">Créer</a>
-            <a href="{{ path('dashboard_list_categories') }}">Lister</a>
+        <h3 class="self-center text-lg my-4 border-b border-gray-300"> Categories </h3>
+        <div class="flex flex-col items-center">
+            <a class="cursor-pointer text-blue-600 hover:text-blue-700 my-2" href="{{ path('dashboard_create_category') }}">Créer</a>
+            <a class="cursor-pointer text-blue-600 hover:text-blue-700 my-2" href="{{ path('dashboard_list_categories') }}">Lister</a>
         </div>
     </div>
 </div>

@@ -20,3 +20,15 @@ dashboard:
 dashboard_list_categories:
   path: /admin/dashboard/categories/list
   controller: App\Controller\Admin\Categories\CategoriesAdminController::listAction
+
+dashboard_create_category:
+  path: /admin/dashboard/category/new
+  controller: App\Controller\Admin\Categories\CategoriesAdminController::newAction
+
+dashboard_update_category:
+  path: /admin/dashboard/category/{id}/update
+  controller: App\Controller\Admin\Categories\CategoriesAdminController::updateAction
+
+dashboard_delete_category:
+  path: /admin/dashboard/category/{id}/delete
+  controller: App\Controller\Admin\Categories\CategoriesAdminController::deleteAction
