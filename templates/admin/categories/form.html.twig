@@ -2,7 +2,20 @@
 
 {% block body %}
 
+    <div class="h-full w-full flex items-center justify-center">
 
-{{form(category_form)}}
+        {{ form_start(category_form) }}
 
+        <p class="text-gray-500">
+            {{ form_label(category_form.title) }}
+        </p>
+        <div>
+            {{ form_widget(category_form.title, {attr: {'class' : 'border border-gray-400 rounded-lg'}}) }}
+        </div>
+        <div class="mt-5">
+            {{ form_widget(category_form.save, {attr: {'class': 'px-4 py-2 bg-green-500 rounded-lg text-white'}}) }}
+        </div>
+        {{ form_end(category_form) }}
+.enableVersioning(Encore.isProduction())
+    </div>
 {% endblock %}

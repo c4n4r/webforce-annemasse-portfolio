@@ -32,3 +32,11 @@ dashboard_update_category:
 dashboard_delete_category:
   path: /admin/dashboard/category/{id}/delete
   controller: App\Controller\Admin\Categories\CategoriesAdminController::deleteAction
+
+dashboard_list_technos:
+  path: /admin/dashboard/technos/list
+  controller: App\Controller\Admin\Technos\TechnosAdminController::listAction
+
+dashboard_create_techno:
+  path: /admin/dashboard/techno/new
+  controller: App\Controller\Admin\Technos\TechnosAdminController::newAction
