@@ -1,0 +1,23 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+
+    <div class="w-full h-full flex items-center justify-center">
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>nom</th>
+                <th>actions</th>
+            </tr>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.title }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+{% endblock %}
